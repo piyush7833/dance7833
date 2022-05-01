@@ -1,0 +1,26 @@
+//- base.pug or layout.pug is a template which is used so that we not need to copy navbar or footer or filed required in all pages same
+doctype html
+html
+  head
+    title Piyush Dance Academy
+    block scripts
+      script(src='/jquery.js')
+    block style
+      script(src='/jquery.js')
+  body
+    nav#navbar
+        ul
+            div#logo
+                img(src="/static/img/logo.png")
+                | PDA
+                //- square bracket is used for nested
+            li #[a(href="/") Home]
+            li #[a(href="/") About]
+            li #[a(href="/") Services]
+            li #[a(href="/") Class Info]
+            li #[a(href="/contact") Contact Us]
+
+    block content
+    block foot
+      #footer
+        | Copyright © 2019 PiyushAcademy.com | All Rights Reserved  
